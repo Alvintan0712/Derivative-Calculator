@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a derivative calculator using Java programming language. The calculator takes a mathematical expression as input and calculates its derivative using various rules of differentiation.
+This project implements a derivative calculator using Java programming language and Object-Oriented Programming (OOP) concepts. The calculator takes a mathematical expression as input and calculates its derivative using various rules of differentiation.
 
 ## Support Syntax
 
