@@ -41,6 +41,7 @@ f(x)&=\sin x,&f'(x)&=\cos x\\
 f(x)&=\cos x,&f'(x)&=-\sin x\\
 \end{align*}
 $$
+
 $$
 [f(g(x))]'=f'(g(x))g'(x)\\
 [f(x)g(x)]'=f'(x)g(x) + f(x)g'(x)
