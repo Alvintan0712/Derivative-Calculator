@@ -1,0 +1,5 @@
+# Ignore MacOS .DS_Store
+/.DS_Store
+
+# Ignore binary class file
+*.class
