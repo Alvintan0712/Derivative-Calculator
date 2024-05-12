@@ -2,30 +2,46 @@
 
 ## Support Syntax
 
-`Expression` => `BlankItem` [`PlusOrMinus` `BlankItem`] `Term` `BlankItem` | `Expression` `PlusOrMinus` `BlankItem` `Term` `BlankItem`
+`Expression` => `BlankItem` [`PlusOrMinus` `BlankItem`] 
+`Term` `BlankItem` | `Expression` `PlusOrMinus` `BlankItem` `Term` `BlankItem`
+
 `Term` => [`PlusOrMinus` `Whitespace`] `Factor` | `Term` `BlankItem` `*` `BlankItem` `Factor`
+
 `Factor` => `VariableFactor` | `ConstantFactor` | `ExpressionFactor`
+
 `VariableFactor` => `PowerFunction` | `Trigonometric`
+
 `ConstantFactor` => `SignedInteger`
+
 `ExpressionFactor` => `(` `Expression` `)`
+
 `Trigonometric` => `sin` `BlankItem` `(` `BlankItem` `Factor` `BlankItem` `)` [`BlankItem` `Exponent`] | `cos`  `BlankItem` `(` `BlankItem` `Factor` `BlankItem` `)` [`BlankItem` `Exponent`]
+
 `PowerFunction` => `x` [`BlankItem` `Exponent`]
+
 `Exponent` => `**` [`BlankItem` `SignedInteger`]
+
 `SignedInteger` => [`PlusOrMinus`] `IntegersThatAllowLeadingZeros`
+
 `IntegersThatAllowLeadingZeros` => (`0`|`1`|`2`|...|`9`){`0`|`1`|`2`|...|`9`}
+
 `Whitespace` => ` ` | `\t`
+
 `BlankItem` => {`Whitespace`}
+
 `PlusOrMinus` => `+` | `-`
 
 ## Support Derivative Method
 
 $$
-\begin{align}
+\begin{align*}
 f(x)&= c,&f'(x)&=0\\
 f(x)&= x^n,&f'(x)&=nx^{n-1}\\
 f(x)&=\sin x,&f'(x)&=\cos x\\
 f(x)&=\cos x,&f'(x)&=-\sin x\\
-\end{align}\\
+\end{align*}
+$$
+$$
 [f(g(x))]'=f'(g(x))g'(x)\\
 [f(x)g(x)]'=f'(x)g(x) + f(x)g'(x)
 $$
